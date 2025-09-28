@@ -1,0 +1,24 @@
+@use '../variables/' as variables;
+
+// Colors
+$primary: #c78c06;
+$secondary: #ffe6ac;
+
+
+// Fonts
+$font-heading: 'Lato', sans-serif;
+$font-body: 'Karla', sans-serif;
+
+// Spacing
+$spacer: 1rem;
+
+@use '../variables/' as variables;
+
+body{
+    font-family: variables.$font-karla;
+    color: $primary;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: variables.$font-lato;
+}
