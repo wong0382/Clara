@@ -1,14 +1,18 @@
 @use 'sass:map';
 @use '../fonts/' as fonts;
+@use './_colors' as color;
 @use './_sizing' as sizing;
+// @use './_variables' as var;
+// @use '.' as var;
+
 
 $fonts: (
     'lato': fonts.$font-lato,
     'karla': fonts.$font-karla,
 );
 
-$font-heading: map.get($fonts, 'lato');
 $font-body: map.get($fonts, 'karla');
+$font-heading: map.get($fonts, 'lato');
 
 @each $size, $value in sizing.$font-sizes {
     .text-#{$size} {
@@ -16,6 +20,36 @@ $font-body: map.get($fonts, 'karla');
     }
 }
 
-h1 {
-  color: $primary;
+@each $type, $size in $text-sizes {
+  .text-#{$type} {
+    font-size: $size;
+  }
+}
+
+// Headings
+.font-heading {
+  font-family: $font-heading;
+  color: color.$primary;  
+}
+
+body {
+  font-family: $font-body;
+  color: color.$dark;
+}
+
+// color
+.color-primary {
+  color: color.$primary;
+}
+
+.color-secondary {
+  color: color.$secondary;
+}
+
+.color-dark {
+  color: color.$dark;
+}
+
+.color-light {
+  color: color.$light;
 }

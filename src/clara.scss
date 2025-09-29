@@ -1,3 +1,12 @@
 @use './reset/' as reset;
-@use './variables/' as variables;
+@use './variables/' as var;
 @use './base/'as base;
+
+body {
+  font-family: var.$font-body;
+  color: var.$primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var.$font-heading;
+}
