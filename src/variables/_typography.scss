@@ -2,56 +2,10 @@
 @use '../fonts/' as fonts;
 @use './_colors' as colors;
 @use './_sizing' as sizing;
-// @use './_variables' as var;
-// @use '.' as var;
 
+$font-family-base: $font-lato;     
+$font-family-heading: $font-karla; 
 
-$fonts: (
-    'lato': fonts.$font-lato,
-    'karla': fonts.$font-karla,
-);
-
-$font-body: map.get($fonts, 'karla');
-$font-heading: map.get($fonts, 'lato');
-
-@each $size, $value in sizing.$font-sizes {
-    .text-#{$size} {
-        font-size: $value;
-    }
-}
-
-// color
-@each $color, $value in colors.$colors {
-    .text-#{$color} {
-        color: $value;
-    }
-}
-
-// Headings
-.font-heading {
-  font-family: $font-heading;
-  color: $colors-primary;  
-}
-
-body {
-  font-family: $font-body;
-  color: color.$dark;
-}
-
-
-// .color-primary {
-//   color: color.$primary;
-// }
-
-// .color-secondary {
-//   color: color.$secondary;
-// }
-
-// .color-dark {
-//   color: color.$dark;
-// }
-
-// .color-light {
-//   color: color.$light;
-// }
+// sizing
+$my-value: $spacing-md;
 
