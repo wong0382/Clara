@@ -142,30 +142,28 @@ meter {
   font-size: 62px;
 }
 
+.text-primary {
+  color: #c78c06;
+}
+
+.text-secondary {
+  color: #ffe6ac;
+}
+
+.text-dark {
+  color: #252525;
+}
+
+.text-light {
+  color: #ebe8e2;
+}
+
 .font-heading {
   font-family: "Lato", sans-serif;
-  color: #c78c06;
 }
 
 body {
   font-family: "Karla", sans-serif;
-  color: #252525;
-}
-
-.color-primary {
-  color: #c78c06;
-}
-
-.color-secondary {
-  color: #ffe6ac;
-}
-
-.color-dark {
-  color: #252525;
-}
-
-.color-light {
-  color: #ebe8e2;
 }
 
 body {
@@ -178,7 +176,6 @@ h1 {
 
 body {
   font-family: "Karla", sans-serif;
-  color: #c78c06;
 }
 
 h1, h2, h3, h4, h5, h6 {

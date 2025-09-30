@@ -1,6 +1,6 @@
 @use 'sass:map';
 @use '../fonts/' as fonts;
-@use './_colors' as color;
+@use './_colors' as colors;
 @use './_sizing' as sizing;
 // @use './_variables' as var;
 // @use '.' as var;
@@ -20,16 +20,17 @@ $font-heading: map.get($fonts, 'lato');
     }
 }
 
-@each $type, $size in $text-sizes {
-  .text-#{$type} {
-    font-size: $size;
-  }
+// color
+@each $color, $value in colors.$colors {
+    .text-#{$color} {
+        color: $value;
+    }
 }
 
 // Headings
 .font-heading {
   font-family: $font-heading;
-  color: color.$primary;  
+  color: $colors-primary;  
 }
 
 body {
@@ -37,19 +38,20 @@ body {
   color: color.$dark;
 }
 
-// color
-.color-primary {
-  color: color.$primary;
-}
 
-.color-secondary {
-  color: color.$secondary;
-}
+// .color-primary {
+//   color: color.$primary;
+// }
 
-.color-dark {
-  color: color.$dark;
-}
+// .color-secondary {
+//   color: color.$secondary;
+// }
 
-.color-light {
-  color: color.$light;
-}
+// .color-dark {
+//   color: color.$dark;
+// }
+
+// .color-light {
+//   color: color.$light;
+// }
+
