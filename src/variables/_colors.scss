@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use 'sass:color';
+
 $colors: (
     'primary': #c78c06,
     'secondary': #ffe6ac,
@@ -5,13 +8,22 @@ $colors: (
     'light': #ebe8e2
 );
 
-$primary-color: map-get($colors, 'primary');
-$secondary-color: map-get($colors, 'secondary');
-$dark-color: map-get($colors, 'dark');
-$light-color: map-get($colors, 'light');
+$primary-color: map.get($colors, 'primary');
+$secondary-color: map.get($colors, 'secondary');
+$dark-color: map.get($colors, 'dark');
+$light-color: map.get($colors, 'light');
 
 $text-color: $dark-color;
 $background-color: #ffffff;
-$border-color: lighten($dark-color, 60%);
+$border-color: color.adjust($dark-color, $lightness: 60%);
 
-$color-map: $colors;
+
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color;
+  }
+  
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}

@@ -3,9 +3,61 @@
 @use './_colors' as colors;
 @use './_sizing' as sizing;
 
+$font-karla: "Karla", sans-serif;
+$font-lato: "Lato", sans-serif;
+
 $font-family-base: $font-lato;     
 $font-family-heading: $font-karla; 
 
 // sizing
-$my-value: $spacing-md;
+// $my-value: $spacing-md;
 
+// heading settings
+$font-size-xs: map.get($font-sizes, 'xs') !default;
+$font-size-sm: map.get($font-sizes, 'sm') !default;
+$font-size-md: map.get($font-sizes, 'md') !default;
+$font-size-lg: map.get($font-sizes, 'lg') !default;
+$font-size-xl: map.get($font-sizes, 'xl') !default;
+$font-size-2xl: map.get($font-sizes, '2xl') !default;
+$font-size-3xl: map.get($font-sizes, '3xl') !default;
+$font-size-base: $font-size-md !default;
+
+$heading-sizes: (
+  'h1': $font-size-3xl,
+  'h2': $font-size-2xl,
+  'h3': $font-size-2xl,
+  'h4': $font-size-xl,
+  'h5': $font-size-xl,
+  'h6': $font-size-lg,
+);
+
+$heading-spacing: (
+  'h1': sizing.$spacing-2xl,
+  'h2': sizing.$spacing-xl,
+  'h3': sizing.$spacing-xl,
+  'h4': sizing.$spacing-lg,
+  'h5': sizing.$spacing-lg,
+  'h6': sizing.$spacing-lg,
+);
+
+@each $heading, $size in var.$heading-sizes {
+  #{$heading} {
+    font-size: $size;
+    font-weight: map.get(var.$heading-weights, $heading);
+    margin-bottom: map.get(var.$heading-spacing, $heading);
+  }
+}
+
+$font-size-base: $font-size-md;
+
+// Font weights
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// Line heights
+$line-height-tight: 1.2;
+$line-height-base: 1.6;
+$line-height-relaxed: 1.8;

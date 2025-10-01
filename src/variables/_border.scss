@@ -1,4 +1,19 @@
-@use 'colors' as colors;
+@use 'sass:map';
+@use '../variables' as var;
 
-$border-color: colors.$dark-color;
-$border-width: 2px;
+// $border-color: colors.$dark-color;
+// $border-width: 2px;
+
+.rounded-sm { border-radius: var.$border-radius-sm !important; }
+.rounded { border-radius: var.$border-radius !important; }
+.rounded-lg { border-radius: var.$border-radius-lg !important; }
+
+.border {
+  border: var.$border-width solid var.$border-color !important;
+}
+
+@each $name, $color in var.$colors {
+  .border-#{$name} {
+    border-color: $color !important;
+  }
+}
