@@ -4,9 +4,8 @@
   "description": "A clean, modern CSS framework",
   "main": "index.js",
   "scripts": {
-    "build": "sass src/clara.scss css/clara.css",
-    "watch": "sass --watch src/clara.scss css/clara.css",
-    "build:min": "sass src/clara.scss css/clara.min.css --style compressed"
+    "sass:watch": "sass --watch src/clara.scss css/clara.css",
+    "sass:build": "sass --watch src/clara.scss css/clara.css --style=compressed"
   },
   "keywords": [],
   "author": "",
