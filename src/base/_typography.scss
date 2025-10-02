@@ -1,0 +1,101 @@
+@use 'sass:map';
+@use '../variables' as var;
+
+// Headings - shared styles
+h1, h2, h3, h4, h5, h6 {
+  font-family: var.$font-family-heading;
+  line-height: var.$line-height-tight;
+  color: var.$dark-color;
+  margin-top: 0;
+  
+  &:not(:first-child) {
+    margin-top: var(--heading-margin-top);
+  }
+}
+
+// Individual heading styles using maps
+@each $heading, $size in var.$heading-sizes {
+  #{$heading} {
+    font-size: $size;
+    font-weight: map.get(var.$heading-weights, $heading);
+    margin-bottom: map.get(var.$heading-spacing, $heading);
+    --heading-margin-top: #{map.get(var.$heading-top-spacing, $heading)};
+  }
+}
+
+// Paragraphs
+p {
+  margin-top: 0;
+  margin-bottom: var.$spacing-md;
+  line-height: var.$line-height-base;
+}
+
+// Links
+a {
+  color: var.$primary-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: var.$primary-color;
+    text-decoration: underline;
+  }
+  
+  &:focus {
+    outline: 2px solid var.$primary-color;
+    outline-offset: 2px;
+  }
+}
+
+// Text styles
+strong, b {
+  font-weight: var.$font-weight-bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+small {
+  font-size: var.$font-size-sm;
+}
+
+// Font family utilities
+.font-karla { font-family: var.$font-karla !important; }
+.font-lato { font-family: var.$font-lato !important; }
+
+// Font size utilities (uses sizing variables)
+.text-xs { font-size: var.$font-size-xs !important; }
+.text-sm { font-size: var.$font-size-sm !important; }
+.text-md, .text-base { font-size: var.$font-size-md !important; }
+.text-lg { font-size: var.$font-size-lg !important; }
+.text-xl { font-size: var.$font-size-xl !important; }
+.text-2xl { font-size: var.$font-size-2xl !important; }
+.text-3xl { font-size: var.$font-size-3xl !important; }
+
+// Font weight utilities
+.font-thin { font-weight: var.$font-weight-thin !important; }
+.font-light { font-weight: var.$font-weight-light !important; }
+.font-normal { font-weight: var.$font-weight-normal !important; }
+.font-bold { font-weight: var.$font-weight-bold !important; }
+.font-black { font-weight: var.$font-weight-black !important; }
+
+// Text alignment
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-justify { text-align: justify !important; }
+
+// Text transform
+.uppercase { text-transform: uppercase !important; }
+.lowercase { text-transform: lowercase !important; }
+.capitalize { text-transform: capitalize !important; }
+
+// Line height
+.leading-tight { line-height: var.$line-height-tight !important; }
+.leading-normal { line-height: var.$line-height-base !important; }
+.leading-relaxed { line-height: var.$line-height-relaxed !important; }
+
+// Text decoration
+.underline { text-decoration: underline !important; }
+.no-underline { text-decoration: none !important; }

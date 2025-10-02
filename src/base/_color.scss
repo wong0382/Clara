@@ -1,0 +1,22 @@
+@use 'sass:map';
+@use '../variables' as var;
+
+// Text color utilities
+@each $name, $color in var.$colors {
+  .text-#{$name} {
+    color: $color !important;
+  }
+}
+
+.text-white { color: #ffffff !important; }
+.text-black { color: #000000 !important; }
+
+// Background color utilities
+@each $name, $color in var.$colors {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+}
+
+.bg-white { background-color: #ffffff !important; }
+.bg-transparent { background-color: transparent !important; }

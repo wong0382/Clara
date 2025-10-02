@@ -1,19 +1,16 @@
 @use 'sass:map';
-@use '../variables' as var;
+@use 'colors' as colors;
 
-// $border-color: colors.$dark-color;
-// $border-width: 2px;
+$border-width-thin: 1px !default;
+$border-width: 2px !default;
+$border-width-thick: 4px !default;
 
-.rounded-sm { border-radius: var.$border-radius-sm !important; }
-.rounded { border-radius: var.$border-radius !important; }
-.rounded-lg { border-radius: var.$border-radius-lg !important; }
+$border-radius-none: 0 !default;
+$border-radius-sm: 4px !default;
+$border-radius: 8px !default;
+$border-radius-md: 12px !default;
+$border-radius-lg: 16px !default;
+$border-radius-xl: 24px !default;
+$border-radius-full: 9999px !default;
 
-.border {
-  border: var.$border-width solid var.$border-color !important;
-}
-
-@each $name, $color in var.$colors {
-  .border-#{$name} {
-    border-color: $color !important;
-  }
-}
+$border-style: solid !default;

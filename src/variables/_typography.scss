@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '../fonts/' as fonts;
 @use './_colors' as colors;
+@use './_spacing' as spacing;
 @use './_sizing' as sizing;
 
 $font-karla: "Karla", sans-serif;
@@ -9,55 +10,51 @@ $font-lato: "Lato", sans-serif;
 $font-family-base: $font-lato;     
 $font-family-heading: $font-karla; 
 
-// sizing
-// $my-value: $spacing-md;
-
-// heading settings
-$font-size-xs: map.get($font-sizes, 'xs') !default;
-$font-size-sm: map.get($font-sizes, 'sm') !default;
-$font-size-md: map.get($font-sizes, 'md') !default;
-$font-size-lg: map.get($font-sizes, 'lg') !default;
-$font-size-xl: map.get($font-sizes, 'xl') !default;
-$font-size-2xl: map.get($font-sizes, '2xl') !default;
-$font-size-3xl: map.get($font-sizes, '3xl') !default;
-$font-size-base: $font-size-md !default;
-
-$heading-sizes: (
-  'h1': $font-size-3xl,
-  'h2': $font-size-2xl,
-  'h3': $font-size-2xl,
-  'h4': $font-size-xl,
-  'h5': $font-size-xl,
-  'h6': $font-size-lg,
-);
-
-$heading-spacing: (
-  'h1': sizing.$spacing-2xl,
-  'h2': sizing.$spacing-xl,
-  'h3': sizing.$spacing-xl,
-  'h4': sizing.$spacing-lg,
-  'h5': sizing.$spacing-lg,
-  'h6': sizing.$spacing-lg,
-);
-
-@each $heading, $size in var.$heading-sizes {
-  #{$heading} {
-    font-size: $size;
-    font-weight: map.get(var.$heading-weights, $heading);
-    margin-bottom: map.get(var.$heading-spacing, $heading);
-  }
-}
-
-$font-size-base: $font-size-md;
-
 // Font weights
-$font-weight-thin: 100;
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-bold: 700;
-$font-weight-black: 900;
+$font-weight-thin: 100 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-black: 900 !default;
 
 // Line heights
-$line-height-tight: 1.2;
-$line-height-base: 1.6;
-$line-height-relaxed: 1.8;
+$line-height-tight: 1.2 !default;
+$line-height-base: 1.6 !default;
+$line-height-relaxed: 1.8 !default;
+
+// Heading configurations (uses sizing for font sizes, spacing for margins)
+$heading-sizes: (
+  'h1': sizing.$font-size-3xl,
+  'h2': sizing.$font-size-2xl,
+  'h3': sizing.$font-size-2xl,
+  'h4': sizing.$font-size-xl,
+  'h5': sizing.$font-size-xl,
+  'h6': sizing.$font-size-lg
+) !default;
+
+$heading-weights: (
+  'h1': $font-weight-bold,
+  'h2': $font-weight-bold,
+  'h3': $font-weight-bold,
+  'h4': $font-weight-normal,
+  'h5': $font-weight-normal,
+  'h6': $font-weight-normal
+) !default;
+
+$heading-spacing: (
+  'h1': spacing.$spacing-3xl,
+  'h2': spacing.$spacing-2xl,
+  'h3': spacing.$spacing-2xl,
+  'h4': spacing.$spacing-lg,
+  'h5': spacing.$spacing-lg,
+  'h6': spacing.$spacing-md
+) !default;
+
+$heading-top-spacing: (
+  'h1': spacing.$spacing-3xl,
+  'h2': spacing.$spacing-2xl,
+  'h3': spacing.$spacing-2xl,
+  'h4': spacing.$spacing-lg,
+  'h5': spacing.$spacing-lg,
+  'h6': spacing.$spacing-md
+) !default;

@@ -1,9 +1,6 @@
-@use '../variables/' as var;
+@use '../variables' as var;
 
-body{
-    font-family: var.$font-body;
-}
-
-h1{
-    font-size: 30px;
-}
+@use 'typography';
+@use 'color';
+@use 'spacing';
+@use 'border';

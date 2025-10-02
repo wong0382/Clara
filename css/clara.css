@@ -1,11 +1,11 @@
 /* Error: Undefined variable.
- *    ,
- * 16 | $font-size-xs: map.get($font-sizes, 'xs') !default;
- *    |                        ^^^^^^^^^^^
- *    '
- *   src/variables/_typography.scss 16:24  @forward
- *   src/variables/index.scss 2:1          @use
- *   src/clara.scss 2:1                    root stylesheet */
+ *   ,
+ * 5 | @each $name, $value in var.$spacing-values {
+ *   |                        ^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   src/base/_spacing.scss 5:24  @use
+ *   src/base/index.scss 5:1      @use
+ *   src/clara.scss 16:1          root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -15,5 +15,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 16 \2502  $font-size-xs: map.get($font-sizes, 'xs') !default;\a    \2502                         ^^^^^^^^^^^\a    \2575 \a   src/variables/_typography.scss 16:24  @forward\a   src/variables/index.scss 2:1          @use\a   src/clara.scss 2:1                    root stylesheet";
+  content: "Error: Undefined variable.\a   \2577 \a 5 \2502  @each $name, $value in var.$spacing-values {\a   \2502                         ^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src/base/_spacing.scss 5:24  @use\a   src/base/index.scss 5:1      @use\a   src/clara.scss 16:1          root stylesheet";
 }

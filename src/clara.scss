@@ -1,12 +1,22 @@
-@use './reset/' as reset;
+// ================================
+// Clara CSS Framework
+// A clean, modern, simple CSS framework
+// ================================
+
+// 1. Variables (configuration)
 @use './variables/' as var;
-@use './base/'as base;
 
-body {
-  font-family: var.$font-body;
-  color: var.$primary;
-}
+// 2. Fonts (Google Fonts imports)
+@use './fonts/' as fonts;
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var.$font-heading;
-}
+// 3. Reset (CSS reset)
+@use './reset/' as reset;
+
+// 4. Base styles (HTML elements + utility classes)
+@use './base/' as base;
+
+// 5. Icons (optional)
+@use './icons/' as icons;
+
+// 6. Components (buttons, forms, tables, lists)
+@use './components/' as comp;

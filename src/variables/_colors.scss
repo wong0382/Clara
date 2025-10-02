@@ -16,14 +16,3 @@ $light-color: map.get($colors, 'light');
 $text-color: $dark-color;
 $background-color: #ffffff;
 $border-color: color.adjust($dark-color, $lightness: 60%);
-
-
-@each $name, $color in $colors {
-  .text-#{$name} {
-    color: $color;
-  }
-  
-  .bg-#{$name} {
-    background-color: $color;
-  }
-}

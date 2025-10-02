@@ -1,0 +1,33 @@
+@use 'sass:map';
+@use '../variables' as var;
+
+// Border utilities
+.border { 
+  border: var.$border-width solid var.$border-color !important; 
+}
+.border-0, .border-none { border: none !important; }
+
+.border-t { border-top: var.$border-width solid var.$border-color !important; }
+.border-r { border-right: var.$border-width solid var.$border-color !important; }
+.border-b { border-bottom: var.$border-width solid var.$border-color !important; }
+.border-l { border-left: var.$border-width solid var.$border-color !important; }
+
+// Border width utilities
+.border-thin { border-width: var.$border-width-thin !important; }
+.border-thick { border-width: var.$border-width-thick !important; }
+
+// Border color utilities
+@each $name, $color in var.$colors {
+  .border-#{$name} {
+    border-color: $color !important;
+  }
+}
+
+// Border radius utilities
+.rounded-none { border-radius: var.$border-radius-none !important; }
+.rounded-sm { border-radius: var.$border-radius-sm !important; }
+.rounded { border-radius: var.$border-radius !important; }
+.rounded-md { border-radius: var.$border-radius-md !important; }
+.rounded-lg { border-radius: var.$border-radius-lg !important; }
+.rounded-xl { border-radius: var.$border-radius-xl !important; }
+.rounded-full { border-radius: var.$border-radius-full !important; }
