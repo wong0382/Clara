@@ -1,0 +1,20 @@
+@use 'sass:map';
+
+$font-sizes: (
+    'xs': 11px,
+    'sm': 14px,
+    'md': 18px,
+    'lg': 26px,
+    'xl': 38px,
+    '2xl': 52px,
+    '3xl': 62px
+);
+
+$font-size-xs: map.get($font-sizes, 'xs');
+$font-size-sm: map.get($font-sizes, 'sm');
+$font-size-md: map.get($font-sizes, 'md');
+$font-size-lg: map.get($font-sizes, 'lg');
+$font-size-xl: map.get($font-sizes, 'xl');
+$font-size-2xl: map.get($font-sizes, '2xl');
+$font-size-3xl: map.get($font-sizes, '3xl');
+$font-size-base: $font-size-md;

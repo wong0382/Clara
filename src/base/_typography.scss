@@ -1,0 +1,101 @@
+@use 'sass:map';
+@use '../variables' as var;
+
+// Headings - shared styles
+h1, h2, h3, h4, h5, h6 {
+  font-family: var.$font-family-heading;
+  line-height: var.$line-height-tight;
+  color: var.$dark-color;
+  margin-top: 0;
+  
+  &:not(:first-child) {
+    margin-top: var(--heading-margin-top);
+  }
+}
+
+// Individual heading styles using maps
+@each $heading, $size in var.$heading-sizes {
+  #{$heading} {
+    font-size: $size;
+    font-weight: map.get(var.$heading-weights, $heading);
+    margin-bottom: map.get(var.$heading-spacing, $heading);
+    --heading-margin-top: #{map.get(var.$heading-top-spacing, $heading)};
+  }
+}
+
+// Paragraphs
+p {
+  margin-top: 0;
+  margin-bottom: var.$spacing-md;
+  line-height: var.$line-height-base;
+}
+
+// Links
+a {
+  color: var.$primary-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: var.$primary-color;
+    text-decoration: underline;
+  }
+  
+  &:focus {
+    outline: 2px solid var.$primary-color;
+    outline-offset: 2px;
+  }
+}
+
+// Text styles
+strong, b {
+  font-weight: var.$font-weight-bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+small {
+  font-size: var.$font-size-sm;
+}
+
+// Font family utilities
+.font-karla { font-family: var.$font-karla; }
+.font-lato { font-family: var.$font-lato; }
+
+// Font size utilities (uses sizing variables)
+.text-xs { font-size: var.$font-size-xs; }
+.text-sm { font-size: var.$font-size-sm; }
+.text-md, .text-base { font-size: var.$font-size-md; }
+.text-lg { font-size: var.$font-size-lg; }
+.text-xl { font-size: var.$font-size-xl; }
+.text-2xl { font-size: var.$font-size-2xl; }
+.text-3xl { font-size: var.$font-size-3xl; }
+
+// Font weight utilities
+.font-thin { font-weight: var.$font-weight-thin; }
+.font-light { font-weight: var.$font-weight-light; }
+.font-normal { font-weight: var.$font-weight-normal; }
+.font-bold { font-weight: var.$font-weight-bold; }
+.font-black { font-weight: var.$font-weight-black; }
+
+// Text alignment
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+// Text transform
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+// Line height
+.leading-tight { line-height: var.$line-height-tight; }
+.leading-normal { line-height: var.$line-height-base; }
+.leading-relaxed { line-height: var.$line-height-relaxed; }
+
+// Text decoration
+.underline { text-decoration: underline; }
+.no-underline { text-decoration: none; }

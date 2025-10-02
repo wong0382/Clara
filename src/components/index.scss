@@ -1,0 +1,12 @@
+// Components index
+// Add component partials here (e.g. _buttons.scss) and import or forward them.
+
+// Minimal placeholder component to ensure the folder can be @use'd
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: #c78c06;
+  color: #fff;
+  text-decoration: none;
+}

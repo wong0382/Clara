@@ -1,0 +1,17 @@
+{
+  "name": "clara",
+  "version": "1.0.0",
+  "description": "A clean, modern CSS framework",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass src/clara.scss css/clara.css",
+    "watch": "sass --watch src/clara.scss css/clara.css",
+    "build:min": "sass src/clara.scss css/clara.min.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

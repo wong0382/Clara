@@ -1,0 +1,33 @@
+@use 'sass:map';
+@use '../variables' as var;
+
+// Border utilities
+.border { 
+  border: var.$border-width solid var.$border-color; 
+}
+.border-0, .border-none { border: none; }
+
+.border-t { border-top: var.$border-width solid var.$border-color; }
+.border-r { border-right: var.$border-width solid var.$border-color; }
+.border-b { border-bottom: var.$border-width solid var.$border-color; }
+.border-l { border-left: var.$border-width solid var.$border-color; }
+
+// Border width utilities
+.border-thin { border-width: var.$border-width-thin; }
+.border-thick { border-width: var.$border-width-thick; }
+
+// Border color utilities
+@each $name, $color in var.$colors {
+  .border-#{$name} {
+    border-color: $color;
+  }
+}
+
+// Border radius utilities
+.rounded-none { border-radius: var.$border-radius-none; }
+.rounded-sm { border-radius: var.$border-radius-sm; }
+.rounded { border-radius: var.$border-radius; }
+.rounded-md { border-radius: var.$border-radius-md; }
+.rounded-lg { border-radius: var.$border-radius-lg; }
+.rounded-xl { border-radius: var.$border-radius-xl; }
+.rounded-full { border-radius: var.$border-radius-full; }
