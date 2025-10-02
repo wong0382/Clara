@@ -3,31 +3,31 @@
 
 // Border utilities
 .border { 
-  border: var.$border-width solid var.$border-color !important; 
+  border: var.$border-width solid var.$border-color; 
 }
-.border-0, .border-none { border: none !important; }
+.border-0, .border-none { border: none; }
 
-.border-t { border-top: var.$border-width solid var.$border-color !important; }
-.border-r { border-right: var.$border-width solid var.$border-color !important; }
-.border-b { border-bottom: var.$border-width solid var.$border-color !important; }
-.border-l { border-left: var.$border-width solid var.$border-color !important; }
+.border-t { border-top: var.$border-width solid var.$border-color; }
+.border-r { border-right: var.$border-width solid var.$border-color; }
+.border-b { border-bottom: var.$border-width solid var.$border-color; }
+.border-l { border-left: var.$border-width solid var.$border-color; }
 
 // Border width utilities
-.border-thin { border-width: var.$border-width-thin !important; }
-.border-thick { border-width: var.$border-width-thick !important; }
+.border-thin { border-width: var.$border-width-thin; }
+.border-thick { border-width: var.$border-width-thick; }
 
 // Border color utilities
 @each $name, $color in var.$colors {
   .border-#{$name} {
-    border-color: $color !important;
+    border-color: $color;
   }
 }
 
 // Border radius utilities
-.rounded-none { border-radius: var.$border-radius-none !important; }
-.rounded-sm { border-radius: var.$border-radius-sm !important; }
-.rounded { border-radius: var.$border-radius !important; }
-.rounded-md { border-radius: var.$border-radius-md !important; }
-.rounded-lg { border-radius: var.$border-radius-lg !important; }
-.rounded-xl { border-radius: var.$border-radius-xl !important; }
-.rounded-full { border-radius: var.$border-radius-full !important; }
+.rounded-none { border-radius: var.$border-radius-none; }
+.rounded-sm { border-radius: var.$border-radius-sm; }
+.rounded { border-radius: var.$border-radius; }
+.rounded-md { border-radius: var.$border-radius-md; }
+.rounded-lg { border-radius: var.$border-radius-lg; }
+.rounded-xl { border-radius: var.$border-radius-xl; }
+.rounded-full { border-radius: var.$border-radius-full; }

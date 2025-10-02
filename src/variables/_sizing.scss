@@ -10,11 +10,11 @@ $font-sizes: (
     '3xl': 62px
 );
 
-$font-size-xs: map.get($font-sizes, 'xs') !default;
-$font-size-sm: map.get($font-sizes, 'sm') !default;
-$font-size-md: map.get($font-sizes, 'md') !default;
-$font-size-lg: map.get($font-sizes, 'lg') !default;
-$font-size-xl: map.get($font-sizes, 'xl') !default;
-$font-size-2xl: map.get($font-sizes, '2xl') !default;
-$font-size-3xl: map.get($font-sizes, '3xl') !default;
-$font-size-base: $font-size-md !default;
+$font-size-xs: map.get($font-sizes, 'xs');
+$font-size-sm: map.get($font-sizes, 'sm');
+$font-size-md: map.get($font-sizes, 'md');
+$font-size-lg: map.get($font-sizes, 'lg');
+$font-size-xl: map.get($font-sizes, 'xl');
+$font-size-2xl: map.get($font-sizes, '2xl');
+$font-size-3xl: map.get($font-sizes, '3xl');
+$font-size-base: $font-size-md;

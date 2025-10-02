@@ -11,12 +11,14 @@ $spacing: (
     '3xl': 3rem
 );
 
+$spacing-values: $spacing;
+
 $spacing-0: map.get($spacing, '0');
-$spacing-xs: map.get($spacing, 'xs') !default;
-$spacing-sm: map.get($spacing, 'sm') !default;
-$spacing-md: map.get($spacing, 'md') !default;
-$spacing-lg: map.get($spacing, 'lg') !default;
-$spacing-xl: map.get($spacing, 'xl') !default;
-$spacing-2xl: map.get($spacing, '2xl') !default;
-$spacing-3xl: map.get($spacing, '3xl') !default;
-$spacing-base: $spacing-md !default;
+$spacing-xs: map.get($spacing, 'xs');
+$spacing-sm: map.get($spacing, 'sm');
+$spacing-md: map.get($spacing, 'md');
+$spacing-lg: map.get($spacing, 'lg');
+$spacing-xl: map.get($spacing, 'xl');
+$spacing-2xl: map.get($spacing, '2xl');
+$spacing-3xl: map.get($spacing, '3xl');
+$spacing-base: $spacing-md;

@@ -11,18 +11,18 @@ $font-family-base: $font-lato;
 $font-family-heading: $font-karla; 
 
 // Font weights
-$font-weight-thin: 100 !default;
-$font-weight-light: 300 !default;
-$font-weight-normal: 400 !default;
-$font-weight-bold: 700 !default;
-$font-weight-black: 900 !default;
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
 
 // Line heights
-$line-height-tight: 1.2 !default;
-$line-height-base: 1.6 !default;
-$line-height-relaxed: 1.8 !default;
+$line-height-tight: 1.2;
+$line-height-base: 1.6;
+$line-height-relaxed: 1.8;
 
-// Heading configurations (uses sizing for font sizes, spacing for margins)
+// Heading
 $heading-sizes: (
   'h1': sizing.$font-size-3xl,
   'h2': sizing.$font-size-2xl,
@@ -30,7 +30,7 @@ $heading-sizes: (
   'h4': sizing.$font-size-xl,
   'h5': sizing.$font-size-xl,
   'h6': sizing.$font-size-lg
-) !default;
+);
 
 $heading-weights: (
   'h1': $font-weight-bold,
@@ -39,7 +39,7 @@ $heading-weights: (
   'h4': $font-weight-normal,
   'h5': $font-weight-normal,
   'h6': $font-weight-normal
-) !default;
+);
 
 $heading-spacing: (
   'h1': spacing.$spacing-3xl,
@@ -48,7 +48,7 @@ $heading-spacing: (
   'h4': spacing.$spacing-lg,
   'h5': spacing.$spacing-lg,
   'h6': spacing.$spacing-md
-) !default;
+);
 
 $heading-top-spacing: (
   'h1': spacing.$spacing-3xl,
@@ -57,4 +57,4 @@ $heading-top-spacing: (
   'h4': spacing.$spacing-lg,
   'h5': spacing.$spacing-lg,
   'h6': spacing.$spacing-md
-) !default;
+);

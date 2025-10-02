@@ -61,41 +61,41 @@ small {
 }
 
 // Font family utilities
-.font-karla { font-family: var.$font-karla !important; }
-.font-lato { font-family: var.$font-lato !important; }
+.font-karla { font-family: var.$font-karla; }
+.font-lato { font-family: var.$font-lato; }
 
 // Font size utilities (uses sizing variables)
-.text-xs { font-size: var.$font-size-xs !important; }
-.text-sm { font-size: var.$font-size-sm !important; }
-.text-md, .text-base { font-size: var.$font-size-md !important; }
-.text-lg { font-size: var.$font-size-lg !important; }
-.text-xl { font-size: var.$font-size-xl !important; }
-.text-2xl { font-size: var.$font-size-2xl !important; }
-.text-3xl { font-size: var.$font-size-3xl !important; }
+.text-xs { font-size: var.$font-size-xs; }
+.text-sm { font-size: var.$font-size-sm; }
+.text-md, .text-base { font-size: var.$font-size-md; }
+.text-lg { font-size: var.$font-size-lg; }
+.text-xl { font-size: var.$font-size-xl; }
+.text-2xl { font-size: var.$font-size-2xl; }
+.text-3xl { font-size: var.$font-size-3xl; }
 
 // Font weight utilities
-.font-thin { font-weight: var.$font-weight-thin !important; }
-.font-light { font-weight: var.$font-weight-light !important; }
-.font-normal { font-weight: var.$font-weight-normal !important; }
-.font-bold { font-weight: var.$font-weight-bold !important; }
-.font-black { font-weight: var.$font-weight-black !important; }
+.font-thin { font-weight: var.$font-weight-thin; }
+.font-light { font-weight: var.$font-weight-light; }
+.font-normal { font-weight: var.$font-weight-normal; }
+.font-bold { font-weight: var.$font-weight-bold; }
+.font-black { font-weight: var.$font-weight-black; }
 
 // Text alignment
-.text-left { text-align: left !important; }
-.text-center { text-align: center !important; }
-.text-right { text-align: right !important; }
-.text-justify { text-align: justify !important; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
 
 // Text transform
-.uppercase { text-transform: uppercase !important; }
-.lowercase { text-transform: lowercase !important; }
-.capitalize { text-transform: capitalize !important; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
 
 // Line height
-.leading-tight { line-height: var.$line-height-tight !important; }
-.leading-normal { line-height: var.$line-height-base !important; }
-.leading-relaxed { line-height: var.$line-height-relaxed !important; }
+.leading-tight { line-height: var.$line-height-tight; }
+.leading-normal { line-height: var.$line-height-base; }
+.leading-relaxed { line-height: var.$line-height-relaxed; }
 
 // Text decoration
-.underline { text-decoration: underline !important; }
-.no-underline { text-decoration: none !important; }
+.underline { text-decoration: underline; }
+.no-underline { text-decoration: none; }
