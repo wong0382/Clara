@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 /***
     The new CSS reset - version 1.11.3 (last updated 25.08.2024)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -916,11 +917,8 @@ small {
   border-radius: 9999px;
 }
 
-.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: middle;
+.bi {
+  font-size: 38px;
 }
 
 .button {
