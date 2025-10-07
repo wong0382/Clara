@@ -1,0 +1,55 @@
+@use '../variables/colors' as colors;
+@use '../variables/spacing' as spacing;
+@use '../variables/border' as border;
+@use '../variables/typography' as typography;
+@use '../variables/sizing' as sizing;
+
+// Table styles
+h2 {
+  padding: spacing.$spacing-md 0;
+  font-size: sizing.$font-size-lg;
+  font-weight: typography.$font-weight-bold;
+  color: colors.$dark-color;
+  caption-side: top;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: spacing.$spacing-lg 0;
+  background-color: colors.$background-color;
+  font-family: typography.$font-family-base;
+  font-size: sizing.$font-size-base;
+  line-height: typography.$line-height-base;
+  color: colors.$text-color;
+  border: border.$border-width solid colors.$border-color;
+  border-radius: border.$border-radius;
+}
+
+// Table header
+thead {
+  background-color: colors.$primary-color;
+  color: colors.$background-color;
+  font-weight: typography.$font-weight-bold;
+  text-align: left;
+}
+
+thead th {
+    padding: spacing.$spacing-md spacing.$spacing-lg;
+    border-bottom: border.$border-width-thick solid colors.$border-color;
+    font-family: typography.$font-family-heading;
+    font-size: sizing.$font-size-md;
+    font-weight: typography.$font-weight-bold;
+}
+
+// Table body
+tbody tr {
+    border-bottom: border.$border-width-thin solid colors.$border-color;
+    transition: background-color 0.2s ease;
+}
+
+tbody td {
+    padding: spacing.$spacing-md spacing.$spacing-lg;
+    font-size: sizing.$font-size-base;
+}

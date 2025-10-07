@@ -1,0 +1,36 @@
+@use '../variables/colors' as colors;
+@use '../variables/spacing' as spacing;
+@use '../variables/border' as border;
+@use '../variables/typography' as typography;
+@use '../variables/sizing' as sizing;
+
+// Blockquote styles
+blockquote {
+  margin: spacing.$spacing-xl 0;
+  padding: spacing.$spacing-lg spacing.$spacing-xl;
+  padding-left: spacing.$spacing-2xl;
+  background-color: colors.$light-color;
+  border-left: border.$border-width-thick solid colors.$primary-color;
+  font-family: typography.$font-family-base;
+  font-size: sizing.$font-size-lg;
+  line-height: typography.$line-height-relaxed;
+  color: colors.$dark-color;
+  font-style: italic;
+  position: relative;
+}
+
+// Paragraph inside blockquote
+blockquote p {
+    margin: 0;
+    margin-bottom: spacing.$spacing-md;
+}
+
+// Citation
+cite {
+    display: block;
+    margin-top: spacing.$spacing-md;
+    font-size: sizing.$font-size-sm;
+    font-style: normal;
+    color: colors.$text-color;
+    font-weight: typography.$font-weight-normal;
+}
