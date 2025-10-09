@@ -1,7 +1,9 @@
 // Components index
 // Add component partials here (e.g. _buttons.scss) and import or forward them.
-@forward 'components/tables';
-@forward 'components/blockquotes';
+@forward 'table';
+@forward 'blockquote';
+@forward 'input';
+@forward 'list';
 
 // Minimal placeholder component to ensure the folder can be @use'd
 .button {

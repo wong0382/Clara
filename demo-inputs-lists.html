@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clara Framework - Inputs & Lists Demo</title>
+    <link rel="stylesheet" href="src/clara.css">
+    <style>
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f5f5f5;
+        }
+        .demo-section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .demo-section h2 {
+            color: #c78c06;
+            border-bottom: 2px solid #c78c06;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .demo-section h3 {
+            color: #252525;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .code-label {
+            font-family: monospace;
+            background: #ebe8e2;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align: center; margin-bottom: 3rem;">
+        <h1 style="color: #c78c06; font-size: 3rem; margin-bottom: 0.5rem;">Clara CSS Framework</h1>
+        <p style="font-size: 1.25rem; color: #252525;">Inputs & Lists Components Demo</p>
+        <p style="color: #666;">Created by Samuel</p>
+    </header>
+
+    <!-- INPUTS SECTION -->
+    <div class="demo-section">
+        <h2>📝 Input Components</h2>
+
+        <h3>Basic Inputs</h3>
+        <div class="demo-grid">
+            <div class="form-group">
+                <label for="text-input">Text Input</label>
+                <input type="text" id="text-input" placeholder="Enter text...">
+            </div>
+
+            <div class="form-group">
+                <label for="email-input">Email Input</label>
+                <input type="email" id="email-input" placeholder="email@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="password-input">Password Input</label>
+                <input type="password" id="password-input" placeholder="Enter password...">
+            </div>
+
+            <div class="form-group">
+                <label for="number-input">Number Input</label>
+                <input type="number" id="number-input" placeholder="Enter number...">
+            </div>
+
+            <div class="form-group">
+                <label for="date-input">Date Input</label>
+                <input type="date" id="date-input">
+            </div>
+
+            <div class="form-group">
+                <label for="select-input">Select Input</label>
+                <select id="select-input">
+                    <option>Choose an option...</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </select>
+            </div>
+        </div>
+
+        <h3>Textarea</h3>
+        <div class="form-group">
+            <label for="textarea">Message</label>
+            <textarea id="textarea" placeholder="Enter your message..."></textarea>
+        </div>
+
+        <h3>Input Sizes</h3>
+        <div class="demo-grid">
+            <div class="form-group">
+                <span class="code-label">.input-sm</span>
+                <input type="text" class="input-sm" placeholder="Small input">
+            </div>
+
+            <div class="form-group">
+                <span class="code-label">Default</span>
+                <input type="text" placeholder="Default input">
+            </div>
+
+            <div class="form-group">
+                <span class="code-label">.input-lg</span>
+                <input type="text" class="input-lg" placeholder="Large input">
+            </div>
+        </div>
+
+        <h3>Input Variants</h3>
+        <div class="demo-grid">
+            <div class="form-group">
+                <span class="code-label">.input-primary</span>
+                <input type="text" class="input-primary" placeholder="Primary input">
+            </div>
+
+            <div class="form-group">
+                <span class="code-label">.input-secondary</span>
+                <input type="text" class="input-secondary" placeholder="Secondary input">
+            </div>
+
+            <div class="form-group">
+                <span class="code-label">.input-dark</span>
+                <input type="text" class="input-dark" placeholder="Dark input">
+            </div>
+        </div>
+
+        <h3>Input States</h3>
+        <div class="demo-grid">
+            <div class="form-group">
+                <span class="code-label">.input-success</span>
+                <input type="text" class="input-success" value="Valid input">
+                <span class="input-success-text">✓ This field is valid</span>
+            </div>
+
+            <div class="form-group">
+                <span class="code-label">.input-error</span>
+                <input type="text" class="input-error" value="Invalid input">
+                <span class="input-error-text">✗ This field has an error</span>
+            </div>
+
+            <div class="form-group">
+                <span class="code-label">.input-warning</span>
+                <input type="text" class="input-warning" value="Warning input">
+                <span class="input-help">⚠ Please check this field</span>
+            </div>
+
+            <div class="form-group">
+                <span class="code-label">Disabled</span>
+                <input type="text" disabled value="Disabled input">
+            </div>
+        </div>
+
+        <h3>Special Input Styles</h3>
+        <div class="demo-grid">
+            <div class="form-group">
+                <span class="code-label">.input-rounded</span>
+                <input type="text" class="input-rounded" placeholder="Rounded input">
+            </div>
+
+            <div class="form-group">
+                <span class="code-label">.input-borderless</span>
+                <input type="text" class="input-borderless" placeholder="Borderless input">
+            </div>
+        </div>
+
+        <h3>Checkboxes & Radio Buttons</h3>
+        <div class="form-group">
+            <label>
+                <input type="checkbox" checked>
+                I agree to the terms and conditions
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox">
+                Subscribe to newsletter
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="radio" name="choice" checked>
+                Option A
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="radio" name="choice">
+                Option B
+            </label>
+        </div>
+
+        <h3>Range Input</h3>
+        <div class="form-group">
+            <label for="range-input">Volume Control</label>
+            <input type="range" id="range-input" min="0" max="100" value="50">
+        </div>
+
+        <h3>File Input</h3>
+        <div class="form-group">
+            <label for="file-input">Upload File</label>
+            <input type="file" id="file-input">
+        </div>
+    </div>
+
+    <!-- LISTS SECTION -->
+    <div class="demo-section">
+        <h2>📋 List Components</h2>
+
+        <h3>Basic Lists</h3>
+        <div class="demo-grid">
+            <div>
+                <span class="code-label">Unordered List (ul)</span>
+                <ul>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                    <li>Fourth item</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="code-label">Ordered List (ol)</span>
+                <ol>
+                    <li>First step</li>
+                    <li>Second step</li>
+                    <li>Third step</li>
+                    <li>Fourth step</li>
+                </ol>
+            </div>
+        </div>
+
+        <h3>Styled Lists</h3>
+        <div class="demo-grid">
+            <div>
+                <span class="code-label">.list-primary</span>
+                <ul class="list-primary">
+                    <li>Primary styled item</li>
+                    <li>Another item</li>
+                    <li>Third item</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="code-label">.list-checkmark</span>
+                <ul class="list-checkmark">
+                    <li>Completed task</li>
+                    <li>Another completed task</li>
+                    <li>One more task</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="code-label">.list-bullet</span>
+                <ul class="list-bullet">
+                    <li>Bullet point item</li>
+                    <li>Another bullet</li>
+                    <li>Third bullet</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="code-label">.list-dash</span>
+                <ul class="list-dash">
+                    <li>Dash item</li>
+                    <li>Another dash item</li>
+                    <li>Third dash item</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Bordered & Striped Lists</h3>
+        <div class="demo-grid">
+            <div>
+                <span class="code-label">.list-bordered</span>
+                <ul class="list-bordered">
+                    <li>Bordered list item</li>
+                    <li>Hover over me!</li>
+                    <li>Another item</li>
+                    <li>Last item</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="code-label">.list-striped</span>
+                <ul class="list-striped">
+                    <li>Striped item 1</li>
+                    <li>Striped item 2</li>
+                    <li>Striped item 3</li>
+                    <li>Striped item 4</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Card List</h3>
+        <span class="code-label">.list-card</span>
+        <ul class="list-card">
+            <li><strong>Card Item 1</strong><br>This is a card-style list item with hover effects</li>
+            <li><strong>Card Item 2</strong><br>Hover over these cards to see the animation</li>
+            <li><strong>Card Item 3</strong><br>Each card has a subtle shadow and elevation</li>
+        </ul>
+
+        <h3>Numbered List (Custom)</h3>
+        <span class="code-label">.list-numbered</span>
+        <ul class="list-numbered">
+            <li><strong>First Step</strong><br>Begin by setting up your environment</li>
+            <li><strong>Second Step</strong><br>Configure your settings properly</li>
+            <li><strong>Third Step</strong><br>Test everything thoroughly</li>
+        </ul>
+
+        <h3>Horizontal Lists</h3>
+        <div>
+            <span class="code-label">.list-inline</span>
+            <ul class="list-inline">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 1rem;">
+            <span class="code-label">.list-horizontal</span>
+            <ul class="list-horizontal">
+                <li>Tag 1</li>
+                <li>Tag 2</li>
+                <li>Tag 3</li>
+                <li>Tag 4</li>
+            </ul>
+        </div>
+
+        <h3>List Sizes</h3>
+        <div class="demo-grid">
+            <div>
+                <span class="code-label">.list-sm</span>
+                <ul class="list-bordered list-sm">
+                    <li>Small list item</li>
+                    <li>Another small item</li>
+                    <li>Third small item</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="code-label">.list-lg</span>
+                <ul class="list-bordered list-lg">
+                    <li>Large list item</li>
+                    <li>Another large item</li>
+                    <li>Third large item</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>List with Backgrounds</h3>
+        <div class="demo-grid">
+            <div>
+                <span class="code-label">.list-bg-primary</span>
+                <ul class="list-unstyled list-bg-primary">
+                    <li>Primary background</li>
+                    <li>Another item</li>
+                    <li>Third item</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="code-label">.list-bg-secondary</span>
+                <ul class="list-unstyled list-bg-secondary">
+                    <li>Secondary background</li>
+                    <li>Another item</li>
+                    <li>Third item</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="code-label">.list-bg-dark</span>
+                <ul class="list-unstyled list-bg-dark">
+                    <li>Dark background</li>
+                    <li>Another item</li>
+                    <li>Third item</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Description Lists</h3>
+        <div class="demo-grid">
+            <div>
+                <span class="code-label">Default (dl, dt, dd)</span>
+                <dl>
+                    <dt>Name</dt>
+                    <dd>Clara CSS Framework</dd>
+                    <dt>Version</dt>
+                    <dd>1.0.0</dd>
+                    <dt>Author</dt>
+                    <dd>Samuel</dd>
+                </dl>
+            </div>
+
+            <div>
+                <span class="code-label">.dl-inline</span>
+                <dl class="dl-inline">
+                    <dt>Name:</dt>
+                    <dd>Clara CSS Framework</dd>
+                    <dt>Version:</dt>
+                    <dd>1.0.0</dd>
+                    <dt>Author:</dt>
+                    <dd>Samuel</dd>
+                </dl>
+            </div>
+        </div>
+
+        <h3>List with Dividers</h3>
+        <span class="code-label">.list-divided</span>
+        <ul class="list-divided">
+            <li>Item with divider below</li>
+            <li>Another divided item</li>
+            <li>Third divided item</li>
+            <li>Last item (no divider)</li>
+        </ul>
+    </div>
+
+    <footer style="text-align: center; padding: 2rem; color: #666;">
+        <p>Clara CSS Framework - Inputs & Lists Components</p>
+        <p>Developed by Samuel | 2025</p>
+    </footer>
+</body>
+</html>

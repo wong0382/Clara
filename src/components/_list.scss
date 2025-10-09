@@ -1,0 +1,393 @@
+@use '../variables/colors' as colors;
+@use '../variables/spacing' as spacing;
+@use '../variables/border' as border;
+@use '../variables/typography' as typography;
+@use '../variables/sizing' as sizing;
+
+// ================================
+// List Component Styles
+// ================================
+
+// Base list styles
+ul, ol {
+  margin: spacing.$spacing-md 0;
+  padding-left: spacing.$spacing-xl;
+  font-family: typography.$font-family-base;
+  font-size: sizing.$font-size-base;
+  line-height: typography.$line-height-base;
+  color: colors.$text-color;
+}
+
+li {
+  margin-bottom: spacing.$spacing-sm;
+  line-height: typography.$line-height-base;
+}
+
+// Nested lists
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: spacing.$spacing-sm;
+  margin-bottom: spacing.$spacing-sm;
+}
+
+// Unstyled list
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    margin-bottom: spacing.$spacing-xs;
+  }
+}
+
+// Inline list
+.list-inline {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: spacing.$spacing-md;
+
+  li {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+}
+
+// Styled lists
+.list-primary {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: spacing.$spacing-lg;
+    margin-bottom: spacing.$spacing-sm;
+
+    &::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: colors.$primary-color;
+      font-weight: typography.$font-weight-bold;
+      font-size: sizing.$font-size-lg;
+    }
+  }
+}
+
+.list-checkmark {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: spacing.$spacing-xl;
+    margin-bottom: spacing.$spacing-md;
+
+    &::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #28a745;
+      font-weight: typography.$font-weight-bold;
+      font-size: sizing.$font-size-lg;
+      width: spacing.$spacing-lg;
+      height: spacing.$spacing-lg;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(40, 167, 69, 0.1);
+      border-radius: 50%;
+    }
+  }
+}
+
+.list-bullet {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: spacing.$spacing-lg;
+    margin-bottom: spacing.$spacing-sm;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: colors.$primary-color;
+      font-size: sizing.$font-size-xl;
+      line-height: 1;
+    }
+  }
+}
+
+.list-dash {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: spacing.$spacing-lg;
+    margin-bottom: spacing.$spacing-sm;
+
+    &::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: colors.$dark-color;
+    }
+  }
+}
+
+// Bordered list
+.list-bordered {
+  list-style: none;
+  padding-left: 0;
+  border: border.$border-width-thin solid colors.$border-color;
+  border-radius: border.$border-radius;
+
+  li {
+    padding: spacing.$spacing-md spacing.$spacing-lg;
+    margin-bottom: 0;
+    border-bottom: border.$border-width-thin solid colors.$border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: colors.$light-color;
+      transition: background-color 0.2s ease;
+    }
+  }
+}
+
+// Striped list
+.list-striped {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding: spacing.$spacing-md spacing.$spacing-lg;
+    margin-bottom: 0;
+
+    &:nth-child(even) {
+      background-color: colors.$light-color;
+    }
+
+    &:hover {
+      background-color: darken(colors.$light-color, 5%);
+      transition: background-color 0.2s ease;
+    }
+  }
+}
+
+// Card list
+.list-card {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding: spacing.$spacing-lg;
+    margin-bottom: spacing.$spacing-md;
+    background-color: colors.$background-color;
+    border: border.$border-width-thin solid colors.$border-color;
+    border-radius: border.$border-radius;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Numbered list with custom styling
+.list-numbered {
+  list-style: none;
+  counter-reset: custom-counter;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: spacing.$spacing-3xl;
+    margin-bottom: spacing.$spacing-md;
+    counter-increment: custom-counter;
+
+    &::before {
+      content: counter(custom-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: spacing.$spacing-xl;
+      height: spacing.$spacing-xl;
+      background-color: colors.$primary-color;
+      color: colors.$background-color;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: typography.$font-weight-bold;
+      font-size: sizing.$font-size-sm;
+    }
+  }
+}
+
+// Icon list
+.list-icon {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: spacing.$spacing-xl;
+    margin-bottom: spacing.$spacing-md;
+    display: flex;
+    align-items: flex-start;
+
+    .icon {
+      position: absolute;
+      left: 0;
+      top: spacing.$spacing-xs;
+      color: colors.$primary-color;
+      font-size: sizing.$font-size-lg;
+    }
+  }
+}
+
+// Horizontal list
+.list-horizontal {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: spacing.$spacing-md;
+  align-items: center;
+
+  li {
+    margin-bottom: 0;
+    padding: spacing.$spacing-sm spacing.$spacing-md;
+    background-color: colors.$light-color;
+    border-radius: border.$border-radius-sm;
+  }
+}
+
+// Description list
+dl {
+  margin: spacing.$spacing-md 0;
+  font-family: typography.$font-family-base;
+  font-size: sizing.$font-size-base;
+  line-height: typography.$line-height-base;
+}
+
+dt {
+  font-weight: typography.$font-weight-bold;
+  color: colors.$dark-color;
+  margin-bottom: spacing.$spacing-xs;
+  margin-top: spacing.$spacing-md;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+dd {
+  margin-left: spacing.$spacing-lg;
+  margin-bottom: spacing.$spacing-md;
+  color: colors.$text-color;
+}
+
+// Description list inline
+.dl-inline {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: spacing.$spacing-sm spacing.$spacing-lg;
+
+  dt {
+    margin: 0;
+    text-align: right;
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+// List sizes
+.list-sm {
+  font-size: sizing.$font-size-sm;
+
+  li {
+    margin-bottom: spacing.$spacing-xs;
+    padding: spacing.$spacing-xs spacing.$spacing-sm;
+  }
+}
+
+.list-lg {
+  font-size: sizing.$font-size-lg;
+
+  li {
+    margin-bottom: spacing.$spacing-lg;
+    padding: spacing.$spacing-md spacing.$spacing-lg;
+  }
+}
+
+// List with dividers
+.list-divided {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding: spacing.$spacing-md 0;
+    margin-bottom: 0;
+    border-bottom: border.$border-width-thin solid colors.$border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+// Compact list
+.list-compact {
+  li {
+    margin-bottom: spacing.$spacing-xs;
+  }
+}
+
+// Spaced list
+.list-spaced {
+  li {
+    margin-bottom: spacing.$spacing-lg;
+  }
+}
+
+// List with background
+.list-bg-primary {
+  li {
+    background-color: rgba(199, 140, 6, 0.1);
+    padding: spacing.$spacing-sm spacing.$spacing-md;
+    margin-bottom: spacing.$spacing-xs;
+    border-radius: border.$border-radius-sm;
+  }
+}
+
+.list-bg-secondary {
+  li {
+    background-color: colors.$secondary-color;
+    padding: spacing.$spacing-sm spacing.$spacing-md;
+    margin-bottom: spacing.$spacing-xs;
+    border-radius: border.$border-radius-sm;
+  }
+}
+
+.list-bg-dark {
+  li {
+    background-color: colors.$dark-color;
+    color: colors.$background-color;
+    padding: spacing.$spacing-sm spacing.$spacing-md;
+    margin-bottom: spacing.$spacing-xs;
+    border-radius: border.$border-radius-sm;
+  }
+}
